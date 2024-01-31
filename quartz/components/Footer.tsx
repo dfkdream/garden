@@ -4,6 +4,7 @@ import { version } from "../../package.json"
 
 interface Options {
   links: Record<string, string>
+  copyright: string
 }
 
 export default ((opts?: Options) => {
@@ -14,7 +15,7 @@ export default ((opts?: Options) => {
       <footer class={`${displayClass ?? ""}`}>
         <hr />
         <p>
-          Created with <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a>, © {year}
+          © {year}&nbsp;{opts?.copyright} Created&nbsp;with&nbsp;<a href="https://quartz.jzhao.xyz/">Quartz&nbsp;v{version}</a>
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
