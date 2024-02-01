@@ -30,6 +30,7 @@ export default (() => {
         <meta name="generator" content="Quartz" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <meta name="google-site-verification" content="elG0PEvVt1h-1AxD2lFnQbJQuxo0X0d9IV2Jx5Bztqw" />
         {css.map((href) => (
           <link key={href} href={href} rel="stylesheet" type="text/css" spa-preserve />
         ))}
