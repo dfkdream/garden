@@ -12,8 +12,10 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
 
-    //const iconPath = joinSegments(baseDir, "static/favicon.ico")
+    const iconPath = joinSegments(baseDir, "favicon.ico")
     //const ogImagePath = `https://${cfg.baseUrl}/static/og-image.png`
+
+    const feedPath = joinSegments(url.toString(), "index.xml");
 
     return (
       <head>
@@ -25,7 +27,8 @@ export default (() => {
         {/*cfg.baseUrl && <meta property="og:image" content={ogImagePath} />*/}
         <meta property="og:width" content="1200" />
         <meta property="og:height" content="675" />
-        {/*<link rel="icon" href={iconPath} />*/}
+        <link rel="icon" href={iconPath} />
+        <link rel="alternate" type="application/rss+xml" href={feedPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
