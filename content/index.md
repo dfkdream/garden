@@ -9,3 +9,5 @@ This is the place where I write short notes that are not long enough to be uploa
 * [[NixOS]]: NixOS 및 DE 설치
 * [[Firefox]]: Tree Style Tab을 위한 Firefox 커스텀 스타일시트
 * [[Neovim]]: Neovim LSP 설정
+* [[Quartz]]: Quartz 사용 소감
+* [[Git]]: 유즈케이스별 Git 명령어 모음
