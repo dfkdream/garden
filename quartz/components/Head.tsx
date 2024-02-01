@@ -12,10 +12,10 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
 
-    const iconPath = joinSegments(baseDir, "favicon.ico")
+    const iconPath = `https://${cfg.baseUrl}/favicon.ico`;
     //const ogImagePath = `https://${cfg.baseUrl}/static/og-image.png`
 
-    const feedPath = joinSegments(url.toString(), "index.xml");
+    const feedPath = `https://${cfg.baseUrl}/index.xml`;
 
     return (
       <head>
