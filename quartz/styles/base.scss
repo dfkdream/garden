@@ -167,6 +167,12 @@ a {
         gap: 0;
         align-items: center;
       }
+      
+      @media all and (max-width: $mobileBreakpoint) {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 0.5rem;
+      }
     }
 
     & .sidebar.right {
