@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://garden.dfkdream.dev/sitemap.xml
