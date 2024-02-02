@@ -12,3 +12,6 @@ This is the place where I write short notes that are not long enough to be uploa
 * [[Quartz]]: Quartz 사용 소감
 * [[Git]]: 유즈케이스별 Git 명령어 모음
 * [[레시피/index|레시피]]: 빵, 과자 레시피들
+
+# 작성 중인 문서들
+* [[CSAPP/index|CSAPP]]: Computer Systems: A Programmer's Perspective
