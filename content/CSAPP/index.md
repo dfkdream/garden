@@ -9,7 +9,7 @@ http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/schedule.html
 
 27개 강의, 13개 실습, 총 41강
 
- * [ ] 1. Overview
+ * [x] [[1. Overview]]
  * [ ] 2. Bits, Bytes and Ints: Part 1
  * [ ] 3. Bits, Bytes and Ints: Part 2 
  * [ ] 4. Floating Point 
