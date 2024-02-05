@@ -2,13 +2,13 @@ const bufferPx = 150
 const observer = new IntersectionObserver((entries) => {
   for (const entry of entries) {
     const slug = entry.target.id
-    const tocEntryElement = document.querySelector(`a[data-for="${slug}"]`)
+    const tocEntryElement = document.querySelectorAll(`a[data-for="${slug}"]`)
     const windowHeight = entry.rootBounds?.height
     if (windowHeight && tocEntryElement) {
       if (entry.boundingClientRect.y < windowHeight) {
-        tocEntryElement.classList.add("in-view")
+        tocEntryElement.forEach(e=>e.classList.add("in-view"))
       } else {
-        tocEntryElement.classList.remove("in-view")
+        tocEntryElement.forEach(e=>e.classList.remove("in-view"))
       }
     }
   }
