@@ -16,3 +16,4 @@ This is the place where I write short notes that are not long enough to be uploa
 
 # 작성 중인 문서들
 * [[CSAPP/index|CSAPP]]: Computer Systems: A Programmer's Perspective
+* [[Obsidian/index|Obsidian]]: S3, SeaweedFS 동기화 관련 메모
