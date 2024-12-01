@@ -11,11 +11,11 @@ This is the place where I write short notes that are not long enough to be uploa
 * [[Neovim]]: Neovim LSP 설정
 * [[Quartz]]: Quartz 사용 소감
 * [[Git]]: 유즈케이스별 Git 명령어 모음
-* [[레시피/index|레시피]]: 빵, 과자 레시피들
+* [[1-음식/레시피/index|레시피]]: 빵, 과자 레시피들
 
 # 작성 중인 문서들
-* [[NixOS/index|NixOS]]: NixOS 및 DE 설치
+* [[2-기술/NixOS/index|NixOS]]: NixOS 및 DE 설치
 
 # 잊혀진 문서들
-* [[CSAPP/index|CSAPP]]: Computer Systems: A Programmer's Perspective
-* [[Obsidian/index|Obsidian]]: S3, SeaweedFS 동기화 관련 메모
+* [[2-기술/CSAPP/index|CSAPP]]: Computer Systems: A Programmer's Perspective
+* [[2-기술/Obsidian/index|Obsidian]]: S3, SeaweedFS 동기화 관련 메모

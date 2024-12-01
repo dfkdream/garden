@@ -99,11 +99,9 @@ exec-once = waybar
 ```
 ## waybar
 https://github.com/Alexays/Waybar/wiki/Examples
-
 https://github.com/sephid86/archas/tree/master/skel/.config/waybar
 
 `~/.config/waybar`에 `style.css`, `config` 파일 붙여넣기
-
 sway 기준으로 작성되어 있어 수정 필요
 * `config` 파일 `sway/*`를 모두 `hyprland/*`로 변경
 * `style.css` 파일 `#workspace button.focused`를 `#workspace button.active`로 변경 (워크스페이스가 안 보이는 경우 - 테스트 안해봄)
