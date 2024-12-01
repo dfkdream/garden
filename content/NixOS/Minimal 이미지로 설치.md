@@ -1,4 +1,6 @@
-그냥 패키지 매니저만 쓸까
+>[!warning]
+>GNOME 패키지를 설치해야 정상적인 데스크탑 환경 사용이 가능하므로 따라하지 않는 것이 좋다.
+>GNOME 이미지로 OS를 설치한 후 [[NixOS 환경설정]]으로 넘어가는 것을 추천한다.
 # Live CD 부팅
 최상단 기본 옵션으로 부팅하면 됨
 
@@ -59,7 +61,7 @@ boot.plymouth.enable = true;
 # boot.kernelParams = ["quiet"];
 ```
 # Hyprland 설정
-![[Pasted image 20231215165700.png]]
+
 ## configuration.nix
 ```nix
 xdg.portal.enable = true;
