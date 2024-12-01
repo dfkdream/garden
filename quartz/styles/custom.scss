@@ -1,3 +1,16 @@
+@use "./variables.scss" as *;
 @use "./base.scss";
 
 // put your custom CSS here!
+
+.page-title > a {
+    hyphens: none;
+}
+
+@media all and ($mobile){
+    .left.sidebar {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: .5rem !important;
+    }
+}
