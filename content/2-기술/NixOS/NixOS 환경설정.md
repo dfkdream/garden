@@ -1,3 +1,11 @@
+# Flakes 활성화
+`/etc/nixos/configuration.nix`에 다음 설정을 추가해 Flakes와 nix command를 활성화한다.
+```nix
+nix.settings.experimental-features = [ "nix-command" "flakes" ];
+```
+git이 시스템에 설치되어 있어야 Flakes가 정상적으로 작동한다.
+
+참조: https://nixos.wiki/wiki/Flakes
 # flake.nix
 `/etc/nixos/flake.nix`
 ```nix
