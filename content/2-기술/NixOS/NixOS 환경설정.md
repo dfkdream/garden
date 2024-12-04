@@ -19,29 +19,31 @@ git이 시스템에 설치되어 있어야 Flakes가 정상적으로 작동한�
     auto-brightness.url = "github:dfkdream/auto-brightness";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: 
-  let
-    overlays-module = { config, pkgs, ... }: {
-      nixpkgs.overlays = [
-	(final: prev: {
-	  auto-brightness = inputs.auto-brightness.packages.${prev.system}.default;
-	  kime = inputs.nixpkgs-kime.legacyPackages.${prev.system}.kime;
-	})
-      ];
-    };
-  in
-  {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem{
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./configuration.nix
+  outputs = { self, nixpkgs, ... }@inputs:
+    let
+      overlays-module = { config, pkgs, ... }: {
+        nixpkgs.overlays = [
+          (final: prev: {
+            auto-brightness = inputs.auto-brightness.packages.${prev.system}.default;
+            kime = inputs.nixpkgs-kime.legacyPackages.${prev.system}.kime;
+          })
+        ];
+      };
+    in
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./configuration.nix
 
-	overlays-module
-	inputs.sddm-sugar-candy.nixosModules.default
-      ];
+          overlays-module
+          inputs.sddm-sugar-candy.nixosModules.default
+        ];
+      };
+
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
     };
-  };
 }
 ```
 
@@ -59,7 +61,8 @@ git이 시스템에 설치되어 있어야 Flakes가 정상적으로 작동한�
 { config, pkgs, inputs, lib, ... }:
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -102,7 +105,7 @@ git이 시스템에 설치되어 있어야 Flakes가 정상적으로 작동한�
   time.timeZone = "Asia/Seoul";
 
   # Select internationalisation properties.
-  i18n = { 
+  i18n = {
     defaultLocale = "ko_KR.UTF-8";
 
     extraLocaleSettings = {
@@ -135,8 +138,8 @@ git이 시스템에 설치되어 있어야 Flakes가 정상적으로 작동한�
     ];
 
     fontconfig.defaultFonts = {
-      serif = ["NanumMyeongjo"];
-      sansSerif = ["NanumGothic"];
+      serif = [ "NanumMyeongjo" ];
+      sansSerif = [ "NanumGothic" ];
     };
   };
 
@@ -166,6 +169,7 @@ git이 시스템에 설치되어 있어야 Flakes가 정상적으로 작동한�
   # Enable the GNOME Desktop Environment.
   services.displayManager = {
     #gdm.enable = true;
+    #sddm.package = pkgs.libsForQt5.sddm;
     sddm.extraPackages = [ pkgs.libsForQt5.qt5.qtgraphicaleffects ];
     sddm.enable = true;
     defaultSession = "hyprland";
@@ -179,11 +183,11 @@ git이 시스템에 설치되어 있어야 Flakes가 정상적으로 작동한�
       enable = true;
       settings = {
         #FormPosition = "left";
-		Background = lib.cleanSource ./summer-night.png;
-		PartialBlur = true;
-		#MainColor = "#333";
-		#DimBackgroundImage = 0.5;
-		ForceHideCompletePassword = true;
+        Background = lib.cleanSource ./summer-night.png;
+        PartialBlur = true;
+        #MainColor = "#333";
+        #DimBackgroundImage = 0.5;
+        ForceHideCompletePassword = true;
       };
     };
   };
@@ -283,7 +287,6 @@ git이 시스템에 설치되어 있어야 Flakes가 정상적으로 작동한�
     screen
     usbutils
     vscode
-    #pinentry-curses
   ];
 
 
@@ -302,7 +305,6 @@ git이 시스템에 설치되어 있어야 Flakes가 정상적으로 작동한�
   programs.gnupg.agent = {
     enable = true;
     pinentryPackage = pkgs.pinentry-gnome3;
-    #pinentryFlavor = "curses";
     enableSSHSupport = true;
   };
 
@@ -340,8 +342,8 @@ git이 시스템에 설치되어 있어야 Flakes가 정상적으로 작동한�
       User = "dfkdream";
       Type = "oneshot";
     };
-    wantedBy = ["sleep.target" "network-online.target"];
-    after = ["systemd-suspend.service"];
+    wantedBy = [ "sleep.target" "network-online.target" ];
+    after = [ "systemd-suspend.service" ];
     script = ''
       /bin/sh /home/dfkdream/.config/scripts/frontlight.sh on
     '';
