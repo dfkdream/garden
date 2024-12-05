@@ -16,3 +16,4 @@ NixOS 및 Hypr Ecosystem 설치
 * [[waybar 설정]]
 * [[IME 설정]]
 * [[Pipewire 설정]]
+* [[kitty 설정]]
