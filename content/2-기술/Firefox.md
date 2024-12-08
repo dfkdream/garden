@@ -1,4 +1,5 @@
-# UserChrome.css
+`about:profiles`에서 프로필 루트 디렉터리를 확인 후 그 안에 `chrome/userChrome.css` 파일을 만든다.
+# userChrome.css
 ```css
 /* 타이틀 바에서 탭 목록 숨기기
  * 창 제목은 도구 모음 사용자 지정 -> 하단 제목 표시줄 체크로 활성화 */
@@ -16,4 +17,4 @@
 }
 ```
 
-`about:config`에서 `toolkit.legacyUserProfileCustomizations.styleshe` 설정을 `true`로 변경해야 적용된다.
+`about:config`에서 `toolkit.legacyUserProfileCustomizations.stylesheet` 설정을 `true`로 변경해야 적용된다.
