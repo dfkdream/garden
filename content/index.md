@@ -11,13 +11,13 @@ This is the place where I write short notes that are not long enough to be uploa
 * [[Neovim]]: Neovim LSP 설정
 * [[Quartz]]: Quartz 사용 소감
 * [[Git]]: 유즈케이스별 Git 명령어 모음
-* [[1-음식/레시피/index|레시피]]: 빵, 과자 레시피들
+* [[1-음식/레시피/index|레시피]]: 빵, 과자, 음식 레시피들
 * [[KP3S Pro S1 Klipper 설정]]
 * [[EC2 Selenium]]: AWS EC2에서 Selenium 구동하기
 * [[SSH]]: SSH 공개키 인증 명령어 모음
+* [[2-기술/NixOS/index|NixOS]]: NixOS 및 DE 설치
 
 # 작성 중인 문서들
-* [[2-기술/NixOS/index|NixOS]]: NixOS 및 DE 설치
 
 # 잊혀진 문서들
 * [[2-기술/CSAPP/index|CSAPP]]: Computer Systems: A Programmer's Perspective
