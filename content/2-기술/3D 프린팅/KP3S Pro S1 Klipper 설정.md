@@ -1,3 +1,4 @@
+설정 후 초기 세팅: [[재설치 후 초기 세팅법]] 참고
 # printer.cfg
 ```
 [include mainsail.cfg]
