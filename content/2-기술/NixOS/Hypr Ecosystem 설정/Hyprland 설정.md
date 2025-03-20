@@ -1,6 +1,7 @@
 # Hyprland
 > [!warning]
->`Adwaita` 커서는 Hyprcursor를 사용해 따로 패키지해야 함. 
+>`Adwaita` 커서는 Hyprcursor를 사용해 따로 패키징해야 함. 
+>[[XCursor를 Hyprcursor로 변환]]
 
 `~/.config/hyprland.conf`
 ```
