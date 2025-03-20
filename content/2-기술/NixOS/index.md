@@ -12,6 +12,7 @@ NixOS 및 Hypr Ecosystem 설치
 * Hypr Ecosystem
 	* [[Hyprland 설정]]
 	* [[paper, lock, idle 설정]]
+	* [[XCursor를 Hyprcursor로 변환]]
 * [[wofi 설정]]
 * [[waybar 설정]]
 * [[IME 설정]]
